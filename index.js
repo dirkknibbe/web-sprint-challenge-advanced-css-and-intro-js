@@ -232,14 +232,10 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 
 function getArtistByIndex(array, index) {
   /*Your Code Here*/
-  for(let i = 0; i < array.length; i++){
-    console.log(array[i].id);
-    console.log(array[i].name);
-    return `the artist at index ${array[i].id} is ${array[i].name}`;
+  return `the artist at index ${array[index].id} is ${array[index].name}`;
   } 
-  }
   
-console.log(getArtistByIndex(artists, 0));
+console.log('task 3 ', getArtistByIndex(artists, 6));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -251,9 +247,20 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
+function get20s(array) {
   /*Your Code Here*/
-}
+  // arrayOfYears = [];
+  for(let i = 0; i < array.length; i++){
+
+    array.years.split(' - '){
+      .push(arrayOfYears);
+    }
+    
+  }
+
+    }
+
+console.log('task 4 ', get20s(artists));
 
 
 
