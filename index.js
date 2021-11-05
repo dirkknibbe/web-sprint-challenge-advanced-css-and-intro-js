@@ -249,16 +249,17 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array) {
   /*Your Code Here*/
-  // arrayOfYears = [];
+  const arrayOfNames = [];
   for(let i = 0; i < array.length; i++){
-
-    array.years.split(' - '){
-      .push(arrayOfYears);
-    }
-    
+      const years = array[i].years.split(' - ');
+      const born = years[0]
+      const died = years[1]
+      if(born >= 1900 && born <=2000){
+          arrayOfNames.push(array[i].name);
+      }   
   }
-
-    }
+return arrayOfNames;
+}
 
 console.log('task 4 ', get20s(artists));
 
@@ -273,9 +274,14 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/) {
+function removeArtist(array, index) {
   /*Your Code Here*/
+  array.splice(index, 1)
+  
+  return array.length
+  
 }
+console.log('task 5 ', removeArtist(artists, 0)); 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -294,11 +300,21 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
+function addArtist(array) {
   /*Your Code Here*/
+  array.push({ 
+    "id": 20,
+    "name": "Dirk Knibbe", 
+    "years": "1990 - 2021",
+    "genre": "Web Design", 
+    "nationality": "United States of America",
+    "bio": "Has not painted anything good and is not an artist lol but will try super hard"
+  })
+  return array;
+
 }
 
-
+console.log('task 6 ',addArtist(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -307,9 +323,22 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
+function lotsOfArt(array) {
   /*Your Code Here*/
+  const arrayOfNames = [];
+  for(let i = 0; i < array.length; i++){
+      const paintingCount = array[i].paintings
+      if(paintingCount > 100){
+          arrayOfNames.push(array[i].name);
+      }   
+  }
+return arrayOfNames;
 }
+
+
+console.log('task 7 ', lotsOfArt(artists));
+
+
 
 
 /* ***** END OF TASKS ***** */
