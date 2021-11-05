@@ -281,7 +281,7 @@ function removeArtist(array, index) {
   return array.length
   
 }
-console.log('task 5 ', removeArtist(artists, 0)); 
+// console.log('task 5 ', removeArtist(artists, 0)); 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -360,3 +360,6 @@ module.exports = {
   addArtist,
   lotsOfArt
 }
+
+
+
