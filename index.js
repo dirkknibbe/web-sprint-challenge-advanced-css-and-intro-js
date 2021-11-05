@@ -230,12 +230,16 @@ Use getArtistByIndex to do the following:
 
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(array, number) {
+function getArtistByIndex(array, index) {
   /*Your Code Here*/
-
-  return `the artist at index ${array.id} is ${array.name}`;
-}
-console.log(getArtistByIndex(artists, [0]));
+  for(let i = 0; i < array.length; i++){
+    console.log(array[i].id);
+    console.log(array[i].name);
+    return `the artist at index ${array[i].id} is ${array[i].name}`;
+  } 
+  }
+  
+console.log(getArtistByIndex(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
